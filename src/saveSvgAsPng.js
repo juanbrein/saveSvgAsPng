@@ -134,6 +134,7 @@
           canvas.width = img.width;
           canvas.height = img.height;
           canvas.getContext('2d').drawImage(img, 0, 0);
+          image.removeAttribute("href");
           image.setAttributeNS('http://www.w3.org/1999/xlink', 'href', canvas.toDataURL('image/png'));
           resolve(true);
         };
